@@ -1,0 +1,15 @@
+{
+  "name": "usystemip-clone",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Clone estatico (multi-page) do funil usystemip.com - pronto para importar na Lovable",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/build.mjs",
+    "preview": "vite preview --port 4173"
+  },
+  "devDependencies": {
+    "vite": "^7.0.0"
+  }
+}

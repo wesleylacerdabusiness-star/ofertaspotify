@@ -1,0 +1,5 @@
+// Temporary visual theme: replace the name, colors and logo to rebrand the app.
+export const THEME = {
+  name: 'Spotify', color: '#1ed760', dark: '#121212', light: '#e6ffbd',
+  logo: '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#1ed760"/><g fill="none" stroke="#121212" stroke-linecap="round"><path stroke-width="2.7" d="M7.5 11.8c5.8-1.8 11.3-1.3 17.1 1.8"/><path stroke-width="2.4" d="M8.8 16.6c4.7-1.4 9.6-1 14.2 1.5"/><path stroke-width="2.1" d="M10 21.1c4-1.1 7.6-.8 11.2 1.1"/></g></svg>',
+};

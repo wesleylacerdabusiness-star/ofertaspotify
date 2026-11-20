@@ -1,0 +1,46 @@
+:root{--blue:#3565df;--pink:#dc2c59;--ink:#344054;--muted:#687386;--border:#dfe4ec}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;min-height:100dvh;background:linear-gradient(135deg,#fafbfc,#f0f3f7);color:var(--ink);font-family:"Segoe UI",Helvetica,sans-serif}
+button,input{font:inherit}
+.verification{min-height:100vh;min-height:100dvh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 16px}
+.verification-title{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 26px;font-size:16px;font-weight:600;letter-spacing:-.25px}
+.verification-card{width:100%;max-width:360px;background:white;border:1px solid var(--border);border-radius:12px;overflow:hidden;box-shadow:0 2px 4px #243b5305,0 12px 32px -16px #243b532b}
+.card-body{padding:26px 24px}
+.verification-row{display:flex;align-items:center;gap:15px;min-height:40px}
+.verify-box{width:31px;height:31px;display:grid;place-items:center;flex-shrink:0;padding:0;border:2px solid #bbc4d1;border-radius:4px;background:white;cursor:pointer;transition:border-color .15s,transform .15s}
+.verify-box:hover{border-color:var(--blue)}
+.verify-box:active{transform:scale(.95)}
+.verify-box:disabled{cursor:wait}
+.verify-label{font-size:15px;cursor:pointer}
+.verification-mark{display:flex;flex-direction:column;align-items:center;gap:4px;margin-left:auto;flex-shrink:0}.verification-mark svg{display:block}.verification-mark span{font-size:8px;line-height:1.2;color:var(--muted)}
+.verification-card footer{padding:12px 20px;background:#f8f9fb;border-top:1px solid #e9edf2;text-align:center;font-size:10px;line-height:1.6;color:var(--muted);letter-spacing:.1px}
+.verify-status{margin:16px 0 0;text-align:center;font-size:12px;color:#23764b}
+.spinner{display:block;width:19px;height:19px;border:2px solid var(--blue);border-top-color:transparent;border-radius:50%;animation:spin .8s linear infinite}
+.tick{color:#23764b;font-size:23px;line-height:1}
+button:focus-visible{outline:3px solid var(--blue);outline-offset:4px}
+dialog{padding:0;border:1px solid var(--border);border-radius:16px;width:calc(100% - 32px);max-width:390px;max-height:calc(100dvh - 32px);overflow:auto;background:white;color:var(--ink);box-shadow:0 20px 64px #172c4d33}
+dialog::backdrop{background:#1a253c99;backdrop-filter:blur(5px)}
+dialog[open]{animation:appear .2s ease-out}
+.challenge-header{padding:28px 24px;text-align:center;background:var(--pink);color:white}
+.challenge-header svg{display:block;width:44px;height:44px;margin:0 auto 16px}
+.challenge-header h2{margin:0 0 8px;font-size:21px;font-weight:600;letter-spacing:-.4px}
+.challenge-header p{margin:0;font-size:13px;line-height:1.6;color:#fff}
+.challenge-body{padding:24px}
+.question{text-align:center}
+.question p{display:inline-block;padding:20px 30px;border-radius:12px;margin:0 0 18px;background:#fff0f4;color:var(--ink);font-size:34px;font-weight:700}
+.challenge-body label{display:block;text-align:center;font-size:13px;color:var(--muted);margin-bottom:20px}
+input{width:100%;padding:13px 16px;border:1px solid #cbd3df;border-radius:9px;background:white;color:var(--ink);font-size:18px;font-weight:600;text-align:center}
+input:focus{outline:3px solid #3565df20;border-color:var(--blue)}
+input[aria-invalid=true]{border-color:#c02c40;background:#fff6f7}
+.confirm{width:100%;margin-top:18px;padding:14px 20px;border:0;border-radius:9px;background:var(--pink);color:white;font-size:15px;font-weight:600;cursor:pointer;transition:background .15s,transform .15s}
+.confirm:hover{background:#c3224b}
+.confirm:active{transform:scale(.98)}
+.confirm:disabled{opacity:.6;cursor:wait}
+#feedback{padding:11px 12px;border-radius:8px;margin:12px 0 0;font-size:12px;line-height:1.5}
+#feedback.error{color:#a32436;background:#fff0f1}
+#feedback.success{color:#23764b;background:#edf8f1}
+.noscript{font-size:13px;text-align:center;color:var(--muted)}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes appear{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:340px){.card-body{padding:24px 20px}.verification-row{gap:12px}.verify-label{font-size:14px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
